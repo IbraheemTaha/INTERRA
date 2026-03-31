@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./backend
+    container_name: interra-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: interra-frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/app
+    env_file:
+      - .env
+    depends_on:
+      - backend
+    restart: unless-stopped
