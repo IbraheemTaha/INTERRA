@@ -1,6 +1,6 @@
 COMPOSE = docker compose
 
-.PHONY: build up start down restart logs logs-backend logs-frontend shell-backend shell-frontend clean
+.PHONY: build up start stop down restart logs logs-backend logs-frontend shell-backend shell-frontend clean
 
 ## Build all images
 build:
@@ -17,7 +17,11 @@ start: up
 up-build:
 	$(COMPOSE) up -d --build
 
-## Stop all services
+## Stop running containers without removing them
+stop:
+	$(COMPOSE) stop
+
+## Stop and remove containers and networks
 down:
 	$(COMPOSE) down
 
