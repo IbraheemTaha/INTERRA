@@ -1,8 +1,7 @@
-# INTERRA
+# INTERRA: Intent-Aware and Interactive Exploration and Recommendation for Table Search in Data Lakes
 
-**Intention-Aware Interactive Table Recommendation for Human-in-the-Loop Data Lake Exploration**
-
-Prototype implementation and supplementary artifact for the INTERRA paper.
+![Logo](frontend/_interra_logo.png)
+Prototype implementation and supplementary artifact for the **INTERRA: Intent-Aware and Interactive Exploration and Recommendation for Table Search in Data Lakes** paper.
 
 ## Overview
 
